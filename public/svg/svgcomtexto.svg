@@ -1,0 +1,39 @@
+<svg width="336" height="403" viewBox="0 0 336 403" fill="none" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="_lastGroup">
+        <g id="_maskGroup">
+            <mask id="mask0_5_24" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="336"
+                height="403">
+                <rect id="_mask" width="336" height="403" fill="url(#pattern0_5_24)" />
+            </mask>
+            <g mask="url(#mask0_5_24)">
+                <rect id="_maskColor" x="-19" y="-30" width="367" height="443" fill="#414bdb" />
+                <!--TODAS TAGS DE ELEMENTOS A SEREM ADICIONADOS PARA EDITAR A CAMISA DEVEM VIR AQUI DENTRO DESTA TAG GROUP-->
+                <!--A PRECEDENCIA DAS TAGS CONTA NO MOMENTO DE-->
+                <!--Tag de imagem -->
+                <image x="50" y="50" width="200" height="200" xlink:href="img/logo.png" />
+                <!--Tag Text com Orientacao de texto-->
+                <text x="90" y="350" font-family="MV Boli" font-size="24" fill="black"
+                    transform="rotate(45 250,250)">JM-Tecnologias</text>
+                <!--Tag TEXT Com quebra de Linha-->
+                <text x="90" y="250" font-family="MV Boli" font-size="24" fill="#d8cc21">
+                    <tspan x="90" dy="1.2em">Primeira linha</tspan>
+                    <tspan x="90" dy="1.2em">Segunda linha</tspan>
+                    <tspan x="90" dy="1.2em">Terceeira linha</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="_texture" style="mix-blend-mode:multiply">
+            <rect width="336" height="403" fill="url(#pattern1_5_24)" />
+        </g>
+    </g>
+    <defs>
+        <pattern id="pattern0_5_24" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_5_24" transform="matrix(0.000439987 0 0 0.000366838 -0.389189 0)" />
+        </pattern>
+        <pattern id="pattern1_5_24" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_5_24" transform="matrix(0.000439987 0 0 0.000366838 -0.389189 0)" />
+        </pattern>
+        <image id="image0_5_24" data-name="camisa.png" width="4096" height="2726" xlink:href="img/camisa.png" />
+    </defs>
+</svg>

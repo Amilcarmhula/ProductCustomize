@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JmPC</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/icons/font/bootstrap-icons.css">
+
+  <!-- <style>
+        @media (max-width: 767px) {
+            #mobile-tabs/*, #controles*/ {
+            display: none;
+          }
+          #mobile-tabs {
+            display: flex;
+          }
+        }
+        @media (min-width: 767px) {
+          #mobile-tabs {
+            display: none;
+          }
+        }*
+      </style> -->
+</head>
+
+<body onload="detectLineBreaks()">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  <div class="container-lg text-capitalize">
+
+    <div class="row ">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        Producto a Personalizar
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group py-1">
+                <select class="form-control" name="" id="">
+                  <option value="">Selecione o producto a personalizar</option>
+                  <option value="Ola1">Ola1</option>
+                </select>
+              </div>
+              <div class="form-group py-1">
+                <select class="form-control" name="" id="selectTag">
+                </select>
+              </div>
+              <div class="form-group py-">
+                <select class="form-control" name="" id="">
+                  <option value="">Selecione o producto a personalizar</option>
+                  <option value="">Ola1</option>
+                </select>
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnModalOK">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2 ">
+      <div class="col-lg-5 col-md-5 col-sm-12 text-center border " id="prev">
+        <!-- <div class="row  pb-3" > -->
+        <!-- <h1 class="mb-3">Preview</h1> -->
+        <!-- <div class="position-relative " style="height: 400px;"> -->
+        <!-- <button class="btn btn-outline-light p-3 position-absolute top-0 start-50 translate-middle" id="moveUp">↑</button> -->
+        <!-- <div class="position-absolute top-0 start-50 translate-middle"><button class="btn btn-outline-light p-3" id="moveUp">↑</button></div> -->
+        <!-- <button class="btn btn-outline-light p-3 position-absolute top-50 start-100 translate-middle" id="moveRight">→</button> -->
+        <!-- <button class="btn btn-outline-light p-3 position-absolute top-100 start-50 translate-middle" id="moveDown">↓</button> -->
+        <!-- <button class="btn btn-outline-light p-3 position-absolute top-50 start-0 translate-middle" id="moveLeft">←</button> -->
+
+        <div id="containerSVG" class="">
+          <!-- <img src="/svg/_lastGroupTudo.svg" onload="loadSVG(this)" > -->
+          <!-- <img src="" onload="loadSVG(this)" id="imgCanvas">-->
+        </div>
+
+        <!-- </div> -->
+
+
+
+        <!-- </div> -->
+        <div class="row  justify-content-around" id="parts">
+          <div class="justify-content-around m-1">
+            <button class="btn btn-secondary btn-outline-dark p-3" id="moveLeft">←</button>
+            <button class="btn btn-secondary btn-outline-dark p-3" id="moveUp">↑</button>
+            <button class="btn btn-secondary btn-outline-dark p-3" id="moveDown">↓</button>
+            <button class="btn btn-secondary btn-outline-dark p-3" id="moveRight">→</button>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-12 border" id="controles">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                # Text & Color Editor
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="row align-items-center">
+                  <div class="col-lg-4">
+                    <select class="form-select" size="5" aria-label="size 3 select example" id="listTextItems">
+                    </select>
+                  </div>
+                  <div class="col-lg-8 text-center ">
+                    <div class="d-flex mt-2">
+                      <div class=" col btn-group flex-fill">
+
+                        <select class="form-select form-select-sm " aria-label=".form-select-sm example"
+                          id="fontFamilySelect">
+                        </select>
+                      </div>
+
+                      <div class="col btn-group flex-fill dropdownn" id="dropFontSize">
+                        <select class="form-select form-select-sm " aria-label=".form-select-sm example" id="fontSize">
+                          <option selected>Font Size</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="16">16</option>
+                          <option value="18">18</option>
+                          <option value="20">20</option>
+                          <option value="22">22</option>
+                          <option value="24">24</option>
+                          <option value="26">26</option>
+                          <option value="28">28</option>
+                          <option value="30">30</option>
+                          <option value="32">32</option>
+                          <option value="34">34</option>
+                          <option value="36">36</option>
+                          <option value="38">38</option>
+                          <option value="40">40</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row  ">
+                      <div class="col mt-1 text-center">
+                        <button type="button" class="btn btn-secondary btn-outline-dark  px-2"
+                          id="btnBold"><strong>B</strong></button>
+                        <button type="button" class="btn btn-secondary btn-outline-dark  px-2"
+                          id="btnItalic"><em><strong>I</strong></em></button>
+                        <button type="button" class="btn btn-secondary btn-outline-dark  px-2"
+                          id="btnUnderline"><u><strong>U</strong></u></button>
+
+                        <!--  <input id="colorPicker" value="#000000" data-jscolor="{}" class="btn btn-outline-dark"> -->
+                        <input type="color" class="btn btn-secondary btn-outline-dark mx-1" id="colorPicker"
+                          value="#000000" title="Choose your color">
+
+                        <button type="button" class="btn btn-secondary btn-outline-dark  px-2" id="btnAlignStart">
+                          <i class="bi bi-align-start"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-outline-dark  px-2 " id="btnAlignCenter">
+                          <i class="bi bi-align-center"></i></button>
+                        <button type="button" class="btn btn-secondary btn-outline-dark  px-2" id="btnAlignEnd">
+                          <i class="bi bi-align-end"></i></button>
+
+                      </div>
+                    </div>
+                    <div class="row ">
+                      <div class="col">
+                        <div class="my-1 ">
+                          <textarea  class="form-control" name="" id="txtArea" cols="30" rows="3"></textarea>
+                        </div>
+
+                      </div>
+                      <div class="col">
+                        <div class="d-grid gap-2 my-1" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-secondary btn-outline-dark" id="btnAdd">ADD</button>
+
+                          <button type="button" class="btn btn-secondary btn-outline-dark"
+                            id="btnDelete">DELETE</button>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Proximo aqui -->
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                # Image Editor
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="row align-items-center">
+
+                  <div class="col">
+                    <div class="my-1 ">
+                      <select class="form-select" size="5" aria-label="size 3 select example" id="listImageItems">
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="input-group">
+                      <span class="input-group-text"><strong>WxH:</strong>
+                      <input type="range" class="form-range" min="0.5" max="5" step="0.1" id="customRange">
+                      </span>
+                      <!-- <input type="range" class="form-range" min="0.5" max="5" step="0.1" id="imageHeight"> -->
+                      <!-- <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"> -->
+                      <!-- <input type="text" aria-label="Image Width" class="form-control" id="imageWidth">
+                      <span class="input-group-text">H</span>
+                      <input type="text" aria-label="Image height" class="form-control" id="imageHeight">
+                      <span class="input-group-text"><i class="bi bi-link"></i><input class="form-check-input mx-1" type="checkbox" value="" ></span> -->
+                      
+                    </div>
+                    <div class="d-grid gap-2 my-1" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-secondary btn-outline-dark" id="btnDeleteImage">DELETE</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="file" id="fileInput" />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                # Art Editor
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+                happening here in terms of content, but just filling up the space to make it look, at least at first
+                glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+          </div>
+        </div>
+        <!-- <h1 class="text-center">editor</h1> -->
+
+      </div>
+    </div>
+
+    <!-- <div id="mobile-tabs" class="justify-content-around mt-3">
+            <button class="btn btn-outline-primary" data-target="#prev" onclick="showMobileContent('prev')">Preview</button>
+            <button class="btn btn-outline-primary" data-target="#controles" onclick="showMobileContent('controles')">Controls</button>
+          </div> -->
+
+  </div>
+
+
+
+  <script src="js/JMProdConfig.js"></script>
+  <script src="js/TextEditor.js"></script>
+  <script src="js/move_resizeItems.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jQuery/jquery-3.7.1.min.js"></script>
+  <!-- <script src="js/jscolor/jscolor.js"></script> -->
+
+  <!-- <script>
+        // $('#prev, #controles').hide();
+     
+       function showMobileContent(targetId) {
+         if(targetId=='prev'){
+            //  $(' #controles').hide();
+             $('#' + targetId).show();
+         }
+         if(targetId=='controles'){
+             console.log('sim')
+            //  $('#prev').hide();
+             $('#' + targetId).show();
+         }
+       }
+     
+       $(document).ready(function() {
+         if ($(window).width() <= 767) {
+             $(' #controles').hide();
+             $('#mobile-tabs').show()
+         }
+         $(window).resize(function() {
+           if ($(window).width() <= 767) {
+             $(' #controles').hide();             $('#mobile-tabs').show()
+     
+           } else {
+             $('#prev, #controles').show();
+             $('#mobile-tabs').hide()
+     
+           }
+         });
+       });
+     </script> -->
+</body>
+
+</html>
