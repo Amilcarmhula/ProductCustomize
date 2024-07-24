@@ -10,24 +10,24 @@ function myMenuFunction() {
 
 var a = document.getElementById('btn-login')
 var b = document.getElementById('btn-register')
-var x = document.getElementById('login')
-var y = document.getElementById('register')
+var xx = document.getElementById('login')
+var yy = document.getElementById('register')
 
 
 
 function login() {
-    x.style.left = '4px'
-    y.style.right = '-500px'
+    xx.style.left = '4px'
+    yy.style.right = '-500px'
     a.className += ' btn-white'
     b.className = ' btn'
-    x.style.opacity = 1
-    y.style.opacity = 0
+    xx.style.opacity = 1
+    yy.style.opacity = 0
 }
 function register() {
-    x.style.left = '-500px'
-    y.style.right = '4px'
+    xx.style.left = '-500px'
+    yy.style.right = '4px'
     a.className = 'btn'
     b.className += ' btn-white'
-    x.style.opacity = 0
-    y.style.opacity = 1
+    xx.style.opacity = 0
+    yy.style.opacity = 1
 }

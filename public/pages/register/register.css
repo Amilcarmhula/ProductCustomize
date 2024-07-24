@@ -28,7 +28,7 @@ body{
     overflow: hidden;
     /* border: 1px solid white; */
     z-index: 2;
-    box-shadow: 0 0 100px 5px;
+    box-shadow: 0 0 50px 5px;
     border-radius: 10px;
 }
 

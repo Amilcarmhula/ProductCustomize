@@ -5,24 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JmPC</title>
-  
+
   <link rel="stylesheet" href="css/navBar/navBar.css">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bootstrap/icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    .btn {
+      /* width: 7rem; */
+      font-weight: 800;
+      background: rgba(255, 255, 255, .4);
+      border-radius: 1.5rem;
+      cursor: pointer;
+      transition: .8s ease;
+      border: none;
+    }
+
+    img{
+      height: 100px;
+      color: black;     
+    }
+  </style>
 
 </head>
 
-<!-- <body onload="detectLineBreaks()"> -->
+<body onload="detectLineBreaks()">
 
-<body>
+  <!-- <body> -->
 
 
   <div class="container-fluid text-capitalize">
     <nav class="navv">
       <!-- Logo with link -->
       <div class="nav-logo">
-        <p>JM-Tecnologias</p>
+        <!-- <img src="./images/LOGOTIPO.png" alt=""> -->
+        <p class="fs-2">JM-Tecnologias</p>
       </div>
       <div class="nav-menu" id="navMenu">
         <!-- Nav items menu -->
@@ -32,7 +48,8 @@
           <li><a href="#" class="links">products</a></li>
           <li><a href="#" class="links">services</a></li>
           <li><a href="/public/pages/login/login.html" class="links linksHide" onclick="login()">login</a></li>
-          <li><a href="/public/pages/register/register.html" class="links linksHide" onclick="register()">register</a></li>
+          <li><a href="/public/pages/register/register.html" class="links linksHide" onclick="register()">register</a>
+          </li>
         </ul>
       </div>
       <div class="nav-btn">
@@ -46,13 +63,12 @@
       </div>
     </nav>
     <!-- ------------------------------------------------------------- -->
-     
+
     <div class="container-lg text-capitalize">
 
       <div class="row ">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-secondary btn-outline-dark" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop">
+        <button type="button" class="btn btn-secondary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           Producto a Personalizar
         </button>
 
@@ -86,7 +102,7 @@
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnModalOK">OK</button>
+                <button type="button" class="btn bg-dark" data-bs-dismiss="modal" id="btnModalOK">OK</button>
               </div>
             </div>
           </div>
@@ -112,7 +128,7 @@
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                   # Text & Color Editor
                 </button>
@@ -272,7 +288,6 @@
     </div>
 
   </div>
-  
 
 
 
@@ -280,8 +295,8 @@
   <script src="js/JMProdConfig.js"></script>
   <script src="js/TextEditor.js"></script>
   <script src="js/move_resizeItems.js"></script>
-  <script src="bootstrap/js/bootstrap.js"></script>
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="js/jQuery/jquery-3.7.1.min.js"></script>
 
 </body>
