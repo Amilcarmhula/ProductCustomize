@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JmPC</title>
+
+    <link rel="stylesheet" href="../../css/navBar/navBar.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bootstrap/icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <div class="container-fluid text-capitalize">
+        <nav class="navv" >
+            <!-- Logo with link -->
+            <div class="nav-logo">
+        <p>JM-Tecnologias</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <!-- Nav items menu -->
+                <ul>
+                    <li><a href="../../index.html" class="links">Home</a></li>
+                    <li><a href="#" class="links">about</a></li>
+                    <li><a href="#" class="links">products</a></li>
+                    <li><a href="#" class="links">services</a></li>
+                </ul>
+            </div>
+            <div class="nav-btn">
+                <button class="btn  btn-white" id="btn-login" onclick="login()">Login</button>
+                <button class="btn" id="btn-register" onclick="register()">Register</button>
+            </div>
+            <!-- Buttons to switch bettween Login and Register window -->
+            <div class="nav-btn-menu">
+                <!-- Icon to colapse or expand menu items -->
+                <i class="bi bi-grid-3x3-gap-fill" onclick="myMenuFunction()" ></i>
+            </div>
+        </nav>
+        <!--------------------------------- Form Box --------------------------------------->
+        <div class="form-box">
+        <!-------------------- Login Form ------------------------->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>don't Have an account? <a href="#" onclick="register()"> sign up</a></span>
+                <header>login</header>
+            </div>
+                <div class="input-box">
+                    <input type="email" class="input-field" placeholder="Username">
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bi bi-lock-fill"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sing In">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check">remember me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Forgot password</a></label>
+                    </div>
+                </div>
+        </div>
+        <!----------------- Registration Form ---------------------->
+        <div class="registration-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()"> login</a></span>
+                <header>sign up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="First Name">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Last Name">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+            </div>
+                <div class="input-box">
+                    <input type="email" class="input-field" placeholder="E-mail">
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="input-box">
+                    <input type="tel" class="input-field" placeholder="Contact">
+                    <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bi bi-lock-fill"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register">
+                </div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../js/navBar/navBar.js"></script>
+
+</body>
+
+</html>

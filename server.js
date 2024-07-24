@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs')
 const cors = require('cors')
+const mongoose = require('mongoose');
 
 const app = express()
 const PORT = 3000
@@ -38,8 +39,6 @@ app.get('/files', (req, res) => {
         res.json(files);
     });
 });
-
-
 
 
 

@@ -1,3 +1,4 @@
+
 const listItemsText = document.getElementById('listTextItems')
 const selectTag = document.getElementById('selectTag')
 const listImageItems = document.getElementById('listImageItems')
@@ -5,29 +6,52 @@ const listImageItems = document.getElementById('listImageItems')
 /*
     Fecth all models to the Select HTML tag
 */
-const fetchModels = () => {
-    var option = ''
-    fetch('http://localhost:3000/files', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-        .then(files => files.json())
-        .then(dados => {
-            // console.log(dados[0])
-            for (var i = 0; i < (dados.length + 1); i++) {
-                if (i == 0) {
-                    option += `<option id='opt0' value=''> Selecione o producto a personalizar </option>`
-                } else {
-                    option += `<option id = opt${i} value='${dados[i - 1]}'> ${dados[i - 1]}</option>`
-                }
-            }
-            selectTag.innerHTML = option
-        })
-}
+// const fetchModels = () => {
+//     var option = ''
+//     fetch('http://localhost:3000/files', {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     })
+//         .then(files => files.json())
+//         .then(dados => {
+//             // console.log(dados[0])
+//             for (var i = 0; i < (dados.length + 1); i++) {
+//                 if (i == 0) {
+//                     option += `<option id='opt0' value=''> Selecione o producto a personalizar </option>`
+//                 } else {
+//                     option += `<option id = opt${i} value='${dados[i - 1]}'> ${dados[i - 1]}</option>`
+//                 }
+//             }
+//             selectTag.innerHTML = option
+//         })
+// }
 
-fetchModels()
+// fetchModels()
+
+const pahtSVG = [
+    '_lastGroupTudo.svg',
+    '_lastGroupTudo2.svg',
+    'Final (1).svg',
+    'flor.svg'
+  
+  ]
+  
+  const fetchModels = (pathtsvg) => {
+  
+    var option = `<option id='opt0' value=''> Selecione o producto a personalizar </option>`
+    var i = 0
+    pathtsvg.forEach(url => {
+        // console.log(url)
+        option += `<option id = opt${i} value='${url}'> ${url}</option>`
+        i++
+    })
+    selectTag.innerHTML = option
+  
+  
+  }
+  fetchModels(pahtSVG)
 
 
 /*When the SVG Model is selected, it create an img HTML tag that will load the SVG via the loadSVG(this) method  */
@@ -98,9 +122,9 @@ const appendChildToFrontList = () => {
 
     loadTags_New().forEach(elements => {
         const element = elements.querySelectorAll('*')
-        for(let i = 0; i < element.length;i++){
+        for (let i = 0; i < element.length; i++) {
             if (element[i].id.startsWith('_text')) {
-            option += `<option value='${element[i].id}'> ${element[i].innerHTML}</option>`
+                option += `<option value='${element[i].id}'> ${element[i].innerHTML}</option>`
             }
             if (element[i].id.startsWith('CorDa')) {
                 option += `<option value='${element[i].id}'> ${element[i].id}</option>`
@@ -121,7 +145,7 @@ fileInput.addEventListener('change', function (event) {
     var svgImage = document.createElementNS('http://www.w3.org/2000/svg', 'image')
     let data = new Date();
     let dataID = '' + data.getFullYear() + (data.getMonth() + 1) + data.getDate() + data.getHours() + data.getMinutes() + data.getSeconds() + data.getMilliseconds()
-    
+
 
     var file = event.target.files[0];
     if (file) {
@@ -129,12 +153,12 @@ fileInput.addEventListener('change', function (event) {
         var imageURL = null
         reader.onload = function (e) {
             imageURL = e.target.result
-                svgImage.setAttribute('id', '_image'+dataID)
-                svgImage.setAttribute('x', 140)
-                svgImage.setAttribute('y', 190)
-                svgImage.setAttribute('width', 100)
-                svgImage.setAttribute('height', 100)
-                svgImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', imageURL)
+            svgImage.setAttribute('id', '_image' + dataID)
+            svgImage.setAttribute('x', 140)
+            svgImage.setAttribute('y', 190)
+            svgImage.setAttribute('width', 100)
+            svgImage.setAttribute('height', 100)
+            svgImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', imageURL)
 
             const maskGroup = document.getElementById(itemSelecionado)
             if (itemSelecionado.startsWith('CorpoD')) {
@@ -201,7 +225,7 @@ const appendChildToImagetList = () => {
 
     maskGroup.forEach(elements => {
         const element = elements.querySelectorAll('*')
-        for(let i = 0; i < element.length;i++){
+        for (let i = 0; i < element.length; i++) {
             if (element[i].id.startsWith('_image')) {
                 option += `<option value='${element[i].id}'> ${element[i].id}</option>`
             }

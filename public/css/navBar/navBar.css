@@ -1,0 +1,128 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    /* background: url('../../images/bg.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    background: linear-gradient(30deg, rgba(0, 255, 0, 0.3) 0%, rgba(0, 0, 255, 0.5) 50%, rgba(255, 0, 0, 0.3) 100%);
+    height: 100vh;
+}
+
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    background: rgba(39, 39, 39, 0);
+}
+.container-lg{
+    margin-top: 150px;
+}
+
+.navv{
+    display: flex;
+    top: 0;
+    position: fixed;
+    justify-content: space-around;
+    width: 100%; 
+    line-height: 60px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%,rgba(255, 255, 255, 0.3) 50%,  rgba(0, 0, 0, 0.3) 100%);
+    box-shadow: 0 0 100px 10px black;
+    z-index: 100;
+}
+.nav-logo p{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style: none;
+}
+
+.nav-menu ul li .links{
+    text-decoration: none;
+    margin:0 25px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.nav-menu ul li .links:hover{
+    border-bottom:  2px solid white;
+}
+
+.nav-btn .btn{
+    width: 7rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .8s ease;
+}
+
+.btn.btn-white{
+    background: rgba(255, 255, 255, .8);
+}
+.nav-btn-menu{
+    display: none;
+}
+.linksHide{
+    display: none;
+}
+  
+@media only screen and (max-width: 787px) {
+    .nav-btn{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 75px;
+    }
+
+    .nav-menu{
+        position: absolute;
+        top: -850px;
+        /* top: 65px; */
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, .2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .linksHide{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-btn-menu{
+        display: block;
+    }
+    .nav-btn-menu i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, .2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav-btn-menu i:hover{
+        background: rgba(255, 255, 255, .3);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .container-fluid{
+        min-height: 100vh;
+    }
+}

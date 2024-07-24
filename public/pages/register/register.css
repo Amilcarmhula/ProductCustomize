@@ -1,0 +1,151 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    /* background: url('../../images/bg.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    background: linear-gradient(30deg, rgba(0, 255, 0, 0.3) 0%, rgba(0, 0, 255, 0.5) 50%, rgba(255, 0, 0, 0.3) 100%);
+    height: 100vh;
+}
+
+
+.container-fluid{
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    /* min-height: 100vh; */
+    /* background: rgba(39, 39, 39, 0); */
+}
+
+.form-box{
+    /* border: 1px solid black; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 460px;
+    overflow: hidden;
+    /* border: 1px solid white; */
+    z-index: 2;
+    box-shadow: 0 0 100px 5px;
+    border-radius: 10px;
+}
+
+.registration-container{
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.login-container{
+    /* border: 1px solid red; */
+    position: absolute;
+    left: -500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.top span{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+}
+.top span a{
+    color: #fff;
+    font-weight: 500;
+    margin-left: 5px;
+}
+header{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 0 30px 0;
+    font-weight: 500;
+}
+.two-forms{
+    display: flex;
+    gap: 10px;
+}
+.input-field{
+    font-size: 15px;
+    background: rgba(255, 255, 255, .2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    transition: .2s ease;
+}
+.input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, .35);
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.input-box i{
+    position: relative;
+    top: -36px;
+    left: 17px;
+    color: #fff;
+}
+
+.submit{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    background: rgba(255, 255, 255, .8);
+}
+
+.submit:hover{
+    background: rgba(245, 234, 234, 0.5);
+    box-shadow: 0 2px 5px 5px rgba(106, 68, 155, 0.5);
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.two-col .one{
+    display:  flex;
+    gap: 5px;
+}
+.two label a{
+    text-decoration: none;
+    color: #fff;
+}
+  
+@media only screen and (max-width: 787px) {
+}
+
+@media only screen and (max-width: 540px) {
+    .form-box{
+        width: 100%;
+        height: 560px;
+    }
+    .registration-container, .login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .registration-container .two-forms{
+        flex-direction: column;
+    }
+}
