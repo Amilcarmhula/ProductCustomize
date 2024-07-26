@@ -1,0 +1,12 @@
+$accordion-bg:  rgba(0, 0, 0, 0.1);
+$accordion-button-bg:  rgba(0, 0, 0, 0.1);
+$accordion-button-active-bg: rgba(0, 0, 0, 0.4);
+$accordion-button-active-color: red;
+$accordion-button-focus-box-shadow: 0 0 100px 5px blue;
+$accordion-border-width:  0px;
+// Pesquisar como os itens de baixo e os demais funcionam
+$accordion-border-radius:  800px;
+$accordion-inner-border-radius: 100px;
+// $accordion-border-radius: 100px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
